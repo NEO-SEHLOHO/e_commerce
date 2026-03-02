@@ -3,85 +3,379 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduWear Store | School Uniform eCommerce</title>
+  <title>B&amp;T Apparel | Premium School Uniform Store</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="topbar"><div class="container topbar-wrap"><p>Back-to-school bulk delivery across South Africa from R5 000</p><p>Order Desk: +27 (0)11 234 5678</p></div></div>
+  <div class="promo-bar">
+    <div class="container promo-inner">
+      <p>Free courier over R1000*</p>
+      <span class="promo-divider" aria-hidden="true"></span>
+      <p>Bulk school orders available</p>
+      <span class="promo-divider" aria-hidden="true"></span>
+      <p>Serving schools across South Africa</p>
+    </div>
+  </div>
+
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html"><span class="brand-mark">E</span><div><strong>EduWear Store</strong><small>South African School Uniform Specialists</small></div></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-      <nav id="site-nav" class="site-nav"><a class="active" href="index.html">Home</a><a href="about.html">About</a><a href="shop.html">Shop</a><a href="quote.html">Quote</a><a href="contact.html">Contact</a><a href="legal.html">Legal</a></nav>
-      <div class="header-search"><input type="search" placeholder="Search SA school uniforms, crests, jerseys..."></div>
-      <div class="nav-actions"><button class="btn btn-outline" type="button">Login</button><a class="cart-btn" href="#" aria-label="Cart with 2 items"><span>&#128722;</span><span class="badge">2</span></a></div>
+    <div class="container header-shell">
+      <a class="brand" href="index.html" aria-label="B and T Apparel home">
+        <span class="brand-mark">B</span>
+        <span class="brand-copy">
+          <strong>Innovation B&amp;T Apparel</strong>
+          <small>Modern school uniform manufacturing and supply</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="shop.html">Shop</a>
+        <a href="quote.html">Quote</a>
+        <a href="contact.html">Contact</a>
+        <a href="legal.html">Legal</a>
+      </nav>
+
+      <div class="header-tools">
+        <label class="search-shell" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <input type="search" placeholder="Search uniforms, schools, styles">
+        </label>
+        <button class="icon-btn" type="button" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="8" r="4"></circle></svg>
+        </button>
+        <a class="icon-btn cart-btn" href="#" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"></circle><circle cx="18" cy="20" r="1.5"></circle><path d="M3 4h2l2.4 10.5a1 1 0 0 0 1 .8h9.8a1 1 0 0 0 1-.8L21 7H7"></path></svg>
+          <span class="badge">2</span>
+        </a>
+      </div>
+
+      <div class="mobile-actions">
+        <a class="icon-btn cart-btn" href="#" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"></circle><circle cx="18" cy="20" r="1.5"></circle><path d="M3 4h2l2.4 10.5a1 1 0 0 0 1 .8h9.8a1 1 0 0 0 1-.8L21 7H7"></path></svg>
+          <span class="badge">2</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
+  <aside class="drawer" data-mobile-drawer>
+    <div class="drawer-backdrop" data-drawer-backdrop></div>
+    <div class="drawer-panel">
+      <div class="drawer-top">
+        <div class="brand-copy">
+          <strong>Innovation B&amp;T Apparel</strong>
+          <small>School uniform eCommerce</small>
+        </div>
+        <button class="drawer-close" type="button" aria-label="Close menu" data-drawer-close>&times;</button>
+      </div>
+      <label class="drawer-search" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+        <input type="search" placeholder="Search uniforms">
+      </label>
+      <nav class="drawer-nav" aria-label="Mobile navigation">
+        <a href="index.html" data-drawer-link>Home</a>
+        <a href="about.html" data-drawer-link>About</a>
+        <a href="shop.html" data-drawer-link>Shop</a>
+        <a href="quote.html" data-drawer-link>Quote</a>
+        <a href="contact.html" data-drawer-link>Contact</a>
+        <a href="legal.html" data-drawer-link>Legal</a>
+      </nav>
+    </div>
+  </aside>
+
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Proudly Supplying Schools Across South Africa</p>
-          <h1>School Uniforms Built for the South African School Year</h1>
-          <p>Shop quality uniforms for Gauteng, Western Cape, KwaZulu-Natal and beyond, with bulk quotes and custom branding.</p>
-          <div class="hero-actions"><a class="btn btn-primary" href="shop.html">Shop Now</a><a class="btn btn-secondary" href="quote.html">Request Quote</a></div>
+    <section class="section-tight">
+      <div class="container">
+        <div class="hero-shell">
+          <div class="container">
+            <div class="hero-layout">
+              <div class="hero-copy">
+                <p class="section-label">South African School Uniform Specialists</p>
+                <h1>Premium school uniforms designed for daily confidence.</h1>
+                <p>B&amp;T Apparel blends made-to-order production, dependable quality control, and polished school-ready presentation for parents, schools, and bulk buyers.</p>
+              </div>
+              <div class="hero-card">
+                <p class="section-label">Quick Start</p>
+                <h2>Quality School Uniform Manufacturing &amp; Supply</h2>
+                <p>Shop polished essentials, request a bulk quote, or plan branded production aligned with your school colours and identity.</p>
+                <div class="btn-row">
+                  <a class="btn btn-primary" href="shop.html">Shop now</a>
+                  <a class="btn btn-secondary" href="quote.html">Request a Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero-panel"><h2>Bulk-ready production</h2><p>Fast turnaround, quality control, and reliable delivery for schools nationwide.</p></div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head">
+          <div class="title-stack">
+            <p class="section-label">Shop by Category</p>
+            <h2>Uniform essentials built for every school day</h2>
+            <div class="title-rule"></div>
+          </div>
+        </div>
+        <div class="chip-row" aria-label="Category strip">
+          <article class="category-tile">
+            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 20V8l5-4 5 4v12"></path><path d="M9 12h6"></path></svg></span>
+            <strong>Blazers</strong>
+            <span>Formal layers</span>
+          </article>
+          <article class="category-tile">
+            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 4h8l1 16H7L8 4Z"></path><path d="M9 8h6"></path></svg></span>
+            <strong>Skirts</strong>
+            <span>Daily school wear</span>
+          </article>
+          <article class="category-tile">
+            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 19V8l3-2 3 3 3-3 3 2v11"></path></svg></span>
+            <strong>Trousers</strong>
+            <span>Comfort fit</span>
+          </article>
+          <article class="category-tile">
+            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m7 18 2-10h6l2 10"></path><path d="M8 8c0-2.2 1.8-4 4-4s4 1.8 4 4"></path></svg></span>
+            <strong>Jerseys</strong>
+            <span>Winter-ready warmth</span>
+          </article>
+          <article class="category-tile">
+            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 7h14l-2 12H7L5 7Z"></path><path d="M9 7V5h6v2"></path></svg></span>
+            <strong>Tracksuits</strong>
+            <span>Sports and activewear</span>
+          </article>
+          <article class="category-tile">
+            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 20V6l5-2 5 2v14"></path><path d="M9 10h6"></path></svg></span>
+            <strong>Shirts</strong>
+            <span>Clean formal basics</span>
+          </article>
+          <article class="category-tile">
+            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="5" width="14" height="14" rx="3"></rect><path d="m8 12 2.5 2.5L16 9"></path></svg></span>
+            <strong>Embroidery</strong>
+            <span>School branding</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container audience-grid">
+        <article class="card audience-card">
+          <span class="audience-hero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"></circle><path d="M3 20a6 6 0 0 1 12 0"></path><path d="M18 11h3"></path><path d="M19.5 9.5v3"></path></svg></span>
+          <div>
+            <p class="section-label">Parents</p>
+            <h3>Shop reliable, polished uniforms with simple reordering.</h3>
+            <p>Find everyday essentials with consistent sizing, durable finishes, and school-ready presentation for learners who need comfort from assembly to final bell.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="shop.html">Browse stock</a>
+            <a class="btn btn-secondary" href="contact.html">Ask a question</a>
+          </div>
+        </article>
+
+        <article class="card audience-card">
+          <span class="audience-hero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V8l8-4 8 4v12"></path><path d="M9 20v-6h6v6"></path></svg></span>
+          <div>
+            <p class="section-label">Businesses &amp; Schools</p>
+            <h3>Bulk ordering built for term launches and branded supply programmes.</h3>
+            <p>Manage custom colours, embroidery, design approvals, and production timelines through a streamlined made-to-order and bulk manufacturing process.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="quote.html">Request pricing</a>
+            <a class="btn btn-secondary" href="about.html">View capabilities</a>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-head"><h2>Shop School Uniform Categories</h2><a href="shop.html">View all</a></div>
-        <div class="category-grid">
-          <article class="category-tile"><h3>Blazers / School Jackets</h3><p>Formal outerwear for school identity.</p></article>
-          <article class="category-tile"><h3>Trousers / Skirts</h3><p>Comfortable, durable everyday wear.</p></article>
-          <article class="category-tile"><h3>Winter Jerseys / Tracksuits</h3><p>Sportswear and active uniform sets.</p></article>
-          <article class="category-tile"><h3>School Shirts / Golfers</h3><p>Cotton-rich core school essentials.</p></article>
-          <article class="category-tile"><h3>Crests / Embroidery / Printing</h3><p>Logos, names, crests and branding.</p></article>
+        <div class="section-head">
+          <div class="title-stack">
+            <p class="section-label">Featured Range</p>
+            <h2>Popular uniform lines</h2>
+            <div class="title-rule"></div>
+          </div>
+          <a class="section-link" href="shop.html">View all</a>
         </div>
-      </div>
-    </section>
 
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head"><h2>Why Choose Us</h2></div>
-        <div class="feature-grid">
-          <article class="feature-card"><h3>Premium Quality</h3><p>Strong stitching and long-lasting fabrics.</p></article>
-          <article class="feature-card"><h3>Bulk Orders</h3><p>Scalable production for schools and groups.</p></article>
-          <article class="feature-card"><h3>Fast Turnaround</h3><p>Reliable lead times for term deadlines.</p></article>
-          <article class="feature-card"><h3>Custom Branding</h3><p>Professional print and embroidery options.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head"><h2>Featured Products</h2><a href="shop.html">Browse catalog</a></div>
         <div class="product-grid">
-          <article class="product-card"><div class="product-image"><img src="assets/images/products/blazer.jpg" alt="Mock school blazer"></div><p class="rating">4.8/5 <span>(124 reviews)</span></p><h3>Matric Navy Blazer</h3><p>Smart formal blazer with wrinkle-resistant blend.</p><ul><li>Reinforced seams</li><li>Breathable lining</li><li>Machine washable</li></ul><p class="price">R899.00</p><div class="actions"><button class="btn btn-outline quick-view-btn" data-name="Matric Navy Blazer" data-price="R899.00" data-desc="Smart formal blazer with wrinkle-resistant blend.">View</button><button class="btn btn-primary">Add to Cart</button></div></article>
-          <article class="product-card"><div class="product-image"><img src="assets/images/products/skirt.jpg" alt="Mock pleated skirt"></div><p class="rating">4.7/5 <span>(98 reviews)</span></p><h3>Pleated School Skirt</h3><p>Comfort-fit skirt with flexible waistband.</p><ul><li>Fade-resistant color</li><li>Crease control</li><li>Easy care</li></ul><p class="price">R499.00</p><div class="actions"><button class="btn btn-outline quick-view-btn" data-name="Pleated School Skirt" data-price="R499.00" data-desc="Comfort-fit skirt with flexible waistband.">View</button><button class="btn btn-primary">Add to Cart</button></div></article>
-          <article class="product-card"><div class="product-image"><img src="assets/images/products/tracksuit.jpg" alt="Mock tracksuit"></div><p class="rating">4.6/5 <span>(67 reviews)</span></p><h3>House Tracksuit Jacket</h3><p>Moisture-wicking jacket for school sports.</p><ul><li>Lightweight fabric</li><li>Zip pockets</li><li>Team branding ready</li></ul><p class="price">R649.00</p><div class="actions"><button class="btn btn-outline quick-view-btn" data-name="House Tracksuit Jacket" data-price="R649.00" data-desc="Moisture-wicking jacket for school sports.">View</button><button class="btn btn-primary">Add to Cart</button></div></article>
-          <article class="product-card"><div class="product-image"><img src="assets/images/products/shirt.jpg" alt="Mock formal shirt"></div><p class="rating">4.7/5 <span>(84 reviews)</span></p><h3>White Long Sleeve School Shirt</h3><p>Cotton-rich shirt with clean formal finish.</p><ul><li>Soft touch</li><li>Button cuff</li><li>Breathable weave</li></ul><p class="price">R399.00</p><div class="actions"><button class="btn btn-outline quick-view-btn" data-name="White Long Sleeve School Shirt" data-price="R399.00" data-desc="Cotton-rich shirt with clean formal finish.">View</button><button class="btn btn-primary">Add to Cart</button></div></article>
-          <article class="product-card"><div class="product-image"><img src="assets/images/products/pants.jpg" alt="Mock school pants"></div><p class="rating">4.5/5 <span>(112 reviews)</span></p><h3>Grey School Trousers</h3><p>Comfort-fit trousers with stretch waist.</p><ul><li>Reinforced knees</li><li>Fade resistant</li><li>Easy care</li></ul><p class="price">R549.00</p><div class="actions"><button class="btn btn-outline quick-view-btn" data-name="Grey School Trousers" data-price="R549.00" data-desc="Comfort-fit trousers with stretch waist.">View</button><button class="btn btn-primary">Add to Cart</button></div></article>
-          <article class="product-card"><div class="product-image"><img src="assets/images/products/embroidery.jpg" alt="Mock embroidery patch"></div><p class="rating">4.9/5 <span>(53 reviews)</span></p><h3>School Crest Embroidery</h3><p>Premium crest embroidery for uniforms.</p><ul><li>Sharp thread finish</li><li>Bulk-friendly pricing</li><li>Color matching</li></ul><p class="price">R99.00</p><div class="actions"><button class="btn btn-outline quick-view-btn" data-name="School Crest Embroidery" data-price="R99.00" data-desc="Premium crest embroidery for uniforms.">View</button><button class="btn btn-primary">Add to Cart</button></div></article>
+          <article class="card product-card">
+            <div class="product-media"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4"><path d="M35 94V42l25-16 25 16v52"></path><path d="M45 58h30"></path></svg></div>
+            <div class="product-body">
+              <div class="product-meta"><span>Formal wear</span><span>Custom embroidery</span></div>
+              <h3>Signature School Blazer</h3>
+              <p>Structured tailoring with lining options and polished finishing.</p>
+              <p class="price">From R899</p>
+              <a class="btn btn-secondary" href="shop.html">Shop item</a>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <div class="product-media"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4"><path d="M42 22h36l8 72H34l8-72Z"></path><path d="M46 40h28"></path></svg></div>
+            <div class="product-body">
+              <div class="product-meta"><span>Daily wear</span><span>Girls uniform</span></div>
+              <h3>Pleated School Skirt</h3>
+              <p>Smart, durable construction for neat presentation all week.</p>
+              <p class="price">From R499</p>
+              <a class="btn btn-secondary" href="shop.html">Shop item</a>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <div class="product-media"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4"><path d="m38 90 10-48h24l10 48"></path><path d="M44 42c0-9 7-16 16-16s16 7 16 16"></path></svg></div>
+            <div class="product-body">
+              <div class="product-meta"><span>Winter line</span><span>School colours</span></div>
+              <h3>Long-Life Jersey</h3>
+              <p>Warm jersey options finished to match school identity.</p>
+              <p class="price">From R429</p>
+              <a class="btn btn-secondary" href="shop.html">Shop item</a>
+            </div>
+          </article>
+
+          <article class="card product-card">
+            <div class="product-media"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4"><rect x="28" y="28" width="64" height="64" rx="10"></rect><path d="m42 60 12 12 24-24"></path></svg></div>
+            <div class="product-body">
+              <div class="product-meta"><span>Branding</span><span>Made to spec</span></div>
+              <h3>Crest &amp; Embroidery Setups</h3>
+              <p>School logos, learner names, and branded uniform finishing.</p>
+              <p class="price">Quoted per order</p>
+              <a class="btn btn-secondary" href="quote.html">Get pricing</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="promo-strip"><div class="container promo-wrap"><h2>Need term-ready uniforms for your school?</h2><a class="btn btn-primary" href="quote.html">Request a Quote</a></div></section>
+    <section class="section-tight">
+      <div class="container">
+        <div class="split-section">
+          <div class="split-copy">
+            <p class="section-label">Bulk Ordering</p>
+            <h2>Built for schools that need reliable turnaround and polished presentation.</h2>
+            <p>B&amp;T Apparel supports made-to-order and bulk production with school-specific colours, logos, sizing requirements, and consistent finishing standards across every order cycle.</p>
+            <div class="btn-row">
+              <a class="btn btn-accent" href="quote.html">Start a bulk quote</a>
+            </div>
+          </div>
+          <div class="split-media" aria-hidden="true">
+            <svg viewBox="0 0 220 220" fill="none" stroke="currentColor" stroke-width="6"><path d="M52 174V76l58-30 58 30v98"></path><path d="M84 174v-54h52v54"></path><path d="M80 102h60"></path></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="split-section reverse">
+          <div class="split-copy">
+            <p class="section-label">Custom Identity</p>
+            <h2>Flexible production for school branding, house colours, and precise garment specs.</h2>
+            <p>From matric jackets to branded jerseys, our process is structured to keep approval, sourcing, manufacturing, and delivery aligned with school standards and expectations.</p>
+            <div class="btn-row">
+              <a class="btn btn-secondary" href="about.html">See how we work</a>
+            </div>
+          </div>
+          <div class="split-media" aria-hidden="true">
+            <svg viewBox="0 0 220 220" fill="none" stroke="currentColor" stroke-width="6"><rect x="55" y="50" width="110" height="120" rx="18"></rect><path d="m78 112 20 20 44-44"></path></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section steps-band">
+      <div class="container">
+        <div class="section-head">
+          <div class="title-stack">
+            <p class="section-label">How to Shop</p>
+            <h2>Simple steps from selection to delivery</h2>
+          </div>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">1</div>
+            <h3>Browse</h3>
+            <p>Explore the main uniform categories and choose what your learner or school needs.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">2</div>
+            <h3>Select</h3>
+            <p>Pick styles, quantities, sizes, and branding requirements that match your school standards.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">3</div>
+            <h3>Confirm</h3>
+            <p>Submit your order or quote request so production details and timelines can be confirmed clearly.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">4</div>
+            <h3>Receive</h3>
+            <p>Your uniforms are finished, checked, and prepared for collection or courier delivery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="help-band">
+      <div class="container help-wrap">
+        <div>
+          <p class="section-label">Need help?</p>
+          <h2>Talk to us about sizing, school branding, or bulk ordering.</h2>
+        </div>
+        <a class="btn btn-accent" href="contact.html">Message us</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-grid"><div><h3>EduWear Store</h3><p>South African School Uniform Specialists</p><p>Tel: +27 (0)11 234 5678</p><p>Email: sales@eduwearsa.example</p></div><div><h4>Quick Links</h4><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="quote.html">Request Quote</a><a href="legal.html">Legal</a></div><div><h4>Social</h4><div class="socials"><a href="#">FB</a><a href="#">IG</a><a href="#">IN</a></div></div></div></footer>
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-grid">
+        <div class="footer-block">
+          <h3>Navigate</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="shop.html">Shop</a>
+          <a href="quote.html">Request a Quote</a>
+        </div>
+        <div class="footer-block">
+          <h3>Information</h3>
+          <a href="legal.html">Legal</a>
+          <a href="legal/terms.html">Terms</a>
+          <a href="legal/privacy.html">Privacy</a>
+          <a href="legal/returns.html">Returns</a>
+        </div>
+        <div class="footer-block">
+          <h3>Quick Links</h3>
+          <a href="shop.html">Shop by Category</a>
+          <a href="quote.html">Bulk Orders</a>
+          <a href="contact.html">Customer Support</a>
+          <a href="legal/faq.html">FAQs</a>
+        </div>
+        <div class="footer-block">
+          <h3>Contact</h3>
+          <p>11 Molteno Street, Reitzpark, Welkom, 9460, South Africa</p>
+          <p>060 771 1685 | 084 246 4470</p>
+          <p>bntinnocons@gmail.com</p>
+          <div class="social-row">
+            <a class="social-link" href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h-2a2 2 0 0 0-2 2v2h4l-.6 4H11v5"></path><path d="M16 3.5A9.5 9.5 0 1 1 8 21"></path></svg></a>
+            <a class="social-link" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="4"></rect><circle cx="12" cy="12" r="3.5"></circle><path d="M17.5 6.5h.01"></path></svg></a>
+            <a class="social-link" href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12a8 8 0 0 1-11.7 7L4 20l1.2-4.1A8 8 0 1 1 20 12Z"></path><path d="M9.5 9.5c1 3 2.5 4.5 5.5 5.5"></path></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-strip">
+      <div class="container">© 2026 Innovation B&amp;T Apparel. Serving schools across South Africa.</div>
+    </div>
+  </footer>
 
-  <div id="quick-view-modal" class="modal" aria-hidden="true"><div class="modal-panel"><button class="modal-close" type="button" aria-label="Close quick view">&times;</button><h3 id="modal-name">Product name</h3><p id="modal-desc">Description</p><p id="modal-price" class="price">R0.00</p><button class="btn btn-primary" type="button">Add to Cart</button></div></div>
   <script src="main.js"></script>
 </body>
 </html>
-
-
-
