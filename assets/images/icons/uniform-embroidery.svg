@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset="1" stop-color="#f1dfbd"/>
+    </linearGradient>
+    <radialGradient id="patch" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f3e6cf"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#6c4d1b" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <ellipse cx="600" cy="760" rx="280" ry="36" fill="#d7b37b" opacity="0.35"/>
+  <g filter="url(#shadow)">
+    <circle cx="600" cy="420" r="230" fill="url(#patch)" stroke="#ddb879" stroke-width="18"/>
+    <path d="M600 275 L646 370 L752 385 L675 455 L697 560 L600 510 L503 560 L525 455 L448 385 L554 370 Z" fill="#f29f2e"/>
+    <circle cx="600" cy="420" r="150" fill="none" stroke="#efc88f" stroke-width="9" stroke-dasharray="6 10"/>
+    <rect x="360" y="670" width="480" height="66" rx="24" fill="#eebd76"/>
+    <text x="600" y="713" text-anchor="middle" font-family="Arial" font-size="42" fill="#7a4a12">Embroidery Patch</text>
+  </g>
+</svg>
