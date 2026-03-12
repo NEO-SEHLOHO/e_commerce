@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -46,32 +46,13 @@
           <input type="search" placeholder="Search uniforms, schools, styles">
         </label>
 
-        <button class="icon-btn" type="button" aria-label="Account">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <path d="M20 21a8 8 0 0 0-16 0"></path>
-            <circle cx="12" cy="8" r="4"></circle>
-          </svg>
-        </button>
+        
 
-        <a class="icon-btn cart-btn" href="#" aria-label="Cart">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="9" cy="20" r="1.5"></circle>
-            <circle cx="18" cy="20" r="1.5"></circle>
-            <path d="M3 4h2l2.4 10.5a1 1 0 0 0 1 .8h9.8a1 1 0 0 0 1-.8L21 7H7"></path>
-          </svg>
-          <span class="badge">2</span>
-        </a>
+        <a class="icon-btn quote-shortcut" href="quote.html" aria-label="Request quotation">Quote</a>
       </div>
 
       <div class="mobile-actions">
-        <a class="icon-btn cart-btn" href="#" aria-label="Cart">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-            <circle cx="9" cy="20" r="1.5"></circle>
-            <circle cx="18" cy="20" r="1.5"></circle>
-            <path d="M3 4h2l2.4 10.5a1 1 0 0 0 1 .8h9.8a1 1 0 0 0 1-.8L21 7H7"></path>
-          </svg>
-          <span class="badge">2</span>
-        </a>
+        <a class="icon-btn quote-shortcut" href="quote.html" aria-label="Request quotation">Quote</a>
 
         <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-menu-toggle>
           <span></span><span></span><span></span>
@@ -86,7 +67,7 @@
       <div class="drawer-top">
         <div class="brand-copy">
           <strong>Innovation B&amp;T Apparel</strong>
-          <small>School uniform eCommerce</small>
+          <small>Company profile and quotations</small>
         </div>
         <button class="drawer-close" type="button" data-drawer-close aria-label="Close menu">&times;</button>
       </div>
@@ -141,75 +122,13 @@
           </div>
 
           <div class="shop-main">
-            <div class="filters-mobile-wrap">
-              <button class="btn btn-secondary filter-toggle" type="button" aria-expanded="false" data-filter-toggle>Filters</button>
-
-              <div class="filters-mobile card top-gap" data-filter-panel>
-                <div class="filter-head">
-                  <h2>Filter products</h2>
-                  <button class="btn btn-secondary" type="button">Clear</button>
-                </div>
-
-                <details class="filter-group" open>
-                  <summary>Category</summary>
-                  <label><input type="checkbox" checked> Jackets / Blazers</label>
-                  <label><input type="checkbox" checked> Pants / Skirts</label>
-                  <label><input type="checkbox" checked> Jerseys / Tracksuits</label>
-                  <label><input type="checkbox" checked> Shirts / T-Shirts</label>
-                  <label><input type="checkbox" checked> Printing / Embroidery</label>
-                </details>
-
-                <details class="filter-group" open>
-                  <summary>Price</summary>
-                  <label><input type="checkbox"> Under R350</label>
-                  <label><input type="checkbox"> R350 - R750</label>
-                  <label><input type="checkbox"> R750 and above</label>
-                </details>
-
-                <details class="filter-group" open>
-                  <summary>Rating</summary>
-                  <label><input type="checkbox"> 4.0 and up</label>
-                  <label><input type="checkbox"> 4.5 and up</label>
-                </details>
-              </div>
-            </div>
-
-            <aside class="card filter-card">
-              <div class="filter-head">
-                <h2>Filters</h2>
-                <button class="btn btn-secondary" type="button">Clear</button>
-              </div>
-
-              <details class="filter-group" open>
-                <summary>Category</summary>
-                <label><input type="checkbox" checked> Jackets / Blazers</label>
-                <label><input type="checkbox" checked> Pants / Skirts</label>
-                <label><input type="checkbox" checked> Jerseys / Tracksuits</label>
-                <label><input type="checkbox" checked> Shirts / T-Shirts</label>
-                <label><input type="checkbox" checked> Printing / Embroidery</label>
-              </details>
-
-              <details class="filter-group" open>
-                <summary>Price</summary>
-                <label><input type="checkbox"> Under R350</label>
-                <label><input type="checkbox"> R350 - R750</label>
-                <label><input type="checkbox"> R750 and above</label>
-              </details>
-
-              <details class="filter-group" open>
-                <summary>Rating</summary>
-                <label><input type="checkbox"> 4.0 and up</label>
-                <label><input type="checkbox"> 4.5 and up</label>
-              </details>
-            </aside>
-
             <div class="catalog-stack">
               <!-- NEW: Desktop-friendly extra row in the right column (won't break mobile) -->
               <div class="catalog-toolbar card">
                 <div class="toolbar-left">
                   <strong>Showing:</strong> <span>All categories</span>
                   <span class="dot" aria-hidden="true"></span>
-                  <span class="muted">10 items</span>
+                  <span class="muted">18+ items</span>
                 </div>
 
                 <div class="toolbar-right">
@@ -217,8 +136,7 @@
                     <span class="muted">Sort</span>
                     <select>
                       <option>Featured</option>
-                      <option>Price: Low to High</option>
-                      <option>Price: High to Low</option>
+                      <option>Alphabetical</option>
                       <option>Newest</option>
                     </select>
                   </label>
@@ -239,27 +157,37 @@
                 <div class="product-grid">
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/branding/custom-school-uniform-design.png" alt="Custom school uniform design">
+                      <img src="assets/images/showcase/jackets/navy-class-of-2025-varsity-jacket.png" alt="Navy class of 2025 varsity jacket design">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Formal wear</span><span>Custom logo</span></div>
                       <h3>Matric Jackets</h3>
                       <p>Custom-designed jackets with embroidery, learner names, and year branding.</p>
-                      <p class="price">Custom quote</p>
-                      <a class="btn btn-secondary" href="quote.html">Request pricing</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
 
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/products/grey-school-uniform-blazer.png" alt="Grey school uniform blazer">
+                      <img src="assets/images/showcase/jackets/black-navy-matric-2024-boondocks-varsity-jacket.png" alt="Matric 2024 varsity jacket design">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Tailored</span><span>Lined finish</span></div>
                       <h3>School Blazers</h3>
                       <p>Formal blazers made to specification with lining and quality finishing.</p>
-                      <p class="price">From R899</p>
-                      <a class="btn btn-secondary" href="quote.html">Get quote</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
+                    </div>
+                  </article>
+
+                  <article class="card product-card">
+                    <div class="product-media">
+                      <img src="assets/images/showcase/jackets/white-blue-senior-2025-varsity-jacket.png" alt="White and blue senior varsity jacket design">
+                    </div>
+                    <div class="product-body">
+                      <div class="product-meta"><span>Matric wear</span><span>Custom artwork</span></div>
+                      <h3>Senior Varsity Jackets</h3>
+                      <p>Custom varsity jackets with school identity, names, and class-year graphics.</p>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
                 </div>
@@ -277,14 +205,13 @@
                 <div class="product-grid">
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/products/school-uniform-grey-skirt.png" alt="Grey school uniform skirt">
+                      <img src="assets/images/showcase/skirts/yellow-plaid-school-skirt.png" alt="Yellow plaid school skirt">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Girls uniform</span><span>Multiple styles</span></div>
                       <h3>School Skirts</h3>
                       <p>Various styles, lengths, and fabrics aligned to school policy requirements.</p>
-                      <p class="price">From R499</p>
-                      <a class="btn btn-secondary" href="shop.html">View details</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
 
@@ -296,8 +223,7 @@
                       <div class="product-meta"><span>Daily wear</span><span>Comfort fit</span></div>
                       <h3>School Trousers</h3>
                       <p>Durable trousers designed for comfortable fit and routine school use.</p>
-                      <p class="price">From R549</p>
-                      <a class="btn btn-secondary" href="shop.html">View details</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
                 </div>
@@ -315,27 +241,25 @@
                 <div class="product-grid">
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/hero/school-uniform-set.png" alt="School uniform set">
+                      <img src="assets/images/showcase/sweaters/navy-white-v-neck-school-sweater.png" alt="Navy and white school sweater">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Winter line</span><span>School colours</span></div>
                       <h3>School Jerseys</h3>
                       <p>Warm, long-lasting jerseys branded with school colours and logos.</p>
-                      <p class="price">From R429</p>
-                      <a class="btn btn-secondary" href="shop.html">View details</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
 
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/hero/school-uniform-set.png" alt="School uniform tracksuit set">
+                      <img src="assets/images/showcase/jackets/white-black-flame-hoodie-jacket-model.png" alt="White and black flame hoodie jacket">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Sportswear</span><span>Active use</span></div>
                       <h3>Tracksuits</h3>
                       <p>Practical tracksuits for sports days and everyday activities.</p>
-                      <p class="price">From R799</p>
-                      <a class="btn btn-secondary" href="shop.html">View details</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
                 </div>
@@ -353,27 +277,25 @@
                 <div class="product-grid">
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/hero/school-uniform-set.png" alt="School uniform set">
+                      <img src="assets/images/showcase/dresses/blue-plaid-girls-school-dress.png" alt="Blue plaid girls school dress">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Girls uniform</span><span>Daily wear</span></div>
                       <h3>Tunics</h3>
                       <p>Durable, comfortable school tunics designed for everyday use.</p>
-                      <p class="price">Custom quote</p>
-                      <a class="btn btn-secondary" href="quote.html">Request pricing</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
 
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/products/light-blue-school-shirt.png" alt="Light blue school shirt">
+                      <img src="assets/images/showcase/polos/white-gold-trim-school-polo.png" alt="White and gold school polo shirt">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Formal &amp; casual</span><span>School standard</span></div>
                       <h3>Shirts / Golfers / T-Shirts</h3>
                       <p>Comfortable daily wear options for consistent school presentation.</p>
-                      <p class="price">From R329</p>
-                      <a class="btn btn-secondary" href="shop.html">View details</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
                 </div>
@@ -391,27 +313,125 @@
                 <div class="product-grid">
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/branding/custom-school-uniform-design.png" alt="Custom colours and logos for school uniforms">
+                      <img src="assets/images/showcase/polos/sky-blue-senior-2024-spongebob-polo.png" alt="Sky blue senior 2024 custom polo design">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Custom colours</span><span>School branding</span></div>
                       <h3>Colours &amp; Logos</h3>
                       <p>School colours, logos, and embroidery options applied to uniform ranges.</p>
-                      <p class="price">Quoted per order</p>
-                      <a class="btn btn-secondary" href="quote.html">Get quote</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
 
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/branding/custom-school-uniform-design.png" alt="School uniform fabric and sizing options">
+                      <img src="assets/images/showcase/jerseys/blue-aurora-school-jersey-photo.png" alt="Blue aurora school jersey samples">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Fabric options</span><span>Size planning</span></div>
                       <h3>Fabric &amp; Sizing Specs</h3>
                       <p>Production aligned to fabric specifications and full sizing requirements.</p>
-                      <p class="price">Quoted per order</p>
-                      <a class="btn btn-secondary" href="quote.html">Get quote</a>
+                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <section>
+                <div class="section-head">
+                  <div class="title-stack">
+                    <p class="section-label">Design Showcase</p>
+                    <h2>Recent custom designs and real-wear previews</h2>
+                    <div class="title-rule"></div>
+                  </div>
+                </div>
+
+                <div class="product-grid">
+                  <article class="card product-card">
+                    <div class="product-media">
+                      <img src="assets/images/showcase/jackets/white-blue-senior-2025-varsity-jacket.png" alt="White and blue senior varsity jacket design">
+                    </div>
+                    <div class="product-body">
+                      <div class="product-meta"><span>Custom matric wear</span><span>Front and back</span></div>
+                      <h3>Senior Varsity Design</h3>
+                      <p>Popular two-tone varsity concept used for Grade 12 farewell collections.</p>
+                    </div>
+                  </article>
+
+                  <article class="card product-card">
+                    <div class="product-media">
+                      <img src="assets/images/showcase/dresses/blue-roc-nations-hooded-rugby-dress.png" alt="Blue ROC Nations hooded rugby dress">
+                    </div>
+                    <div class="product-body">
+                      <div class="product-meta"><span>Sportswear</span><span>School branding</span></div>
+                      <h3>Hooded Rugby Dress</h3>
+                      <p>Athletic dress styling with house colours and crest integration.</p>
+                    </div>
+                  </article>
+
+                  <article class="card product-card">
+                    <div class="product-media">
+                      <img src="assets/images/showcase/polos/black-white-geometric-school-polo.png" alt="Black and white geometric school polo">
+                    </div>
+                    <div class="product-body">
+                      <div class="product-meta"><span>Polo range</span><span>Graphic print</span></div>
+                      <h3>Geometric Polo</h3>
+                      <p>Modern polo concept with monochrome geometric layout.</p>
+                    </div>
+                  </article>
+
+                  <article class="card product-card">
+                    <div class="product-media">
+                      <img src="assets/images/showcase/jackets/black-blue-splatter-matric-varsity-jacket.png" alt="Black and blue splatter matric varsity jacket">
+                    </div>
+                    <div class="product-body">
+                      <div class="product-meta"><span>Matric edition</span><span>Sleeve print</span></div>
+                      <h3>Splatter Varsity</h3>
+                      <p>Dark varsity concept with side print and high-contrast sleeve graphics.</p>
+                    </div>
+                  </article>
+
+                  <article class="card product-card">
+                    <div class="product-media">
+                      <img src="assets/images/showcase/ties/blue-matric-2025-tie.png" alt="Blue matric 2025 tie">
+                    </div>
+                    <div class="product-body">
+                      <div class="product-meta"><span>Accessories</span><span>Custom crest</span></div>
+                      <h3>Matric Tie (Blue)</h3>
+                      <p>Custom tie mockup for school identity and final-year branding.</p>
+                    </div>
+                  </article>
+
+                  <article class="card product-card">
+                    <div class="product-media">
+                      <img src="assets/images/showcase/ties/yellow-green-matric-2025-tie.png" alt="Yellow and green matric 2025 tie">
+                    </div>
+                    <div class="product-body">
+                      <div class="product-meta"><span>Accessories</span><span>Colour variants</span></div>
+                      <h3>Matric Tie (Yellow/Green)</h3>
+                      <p>Alternative colourway option for school-specific branding kits.</p>
+                    </div>
+                  </article>
+
+                  <article class="card product-card">
+                    <div class="product-media">
+                      <img src="assets/images/showcase/groups/blue-senior-2025-uniform-group-photo.png" alt="Group photo in blue senior 2025 uniforms">
+                    </div>
+                    <div class="product-body">
+                      <div class="product-meta"><span>Real wear</span><span>Bulk delivery</span></div>
+                      <h3>Senior Group Delivery</h3>
+                      <p>Real-life group preview after delivery for a senior class order.</p>
+                    </div>
+                  </article>
+
+                  <article class="card product-card">
+                    <div class="product-media">
+                      <img src="assets/images/showcase/groups/matric-2024-boondocks-group-back-view.png" alt="Matric 2024 boondocks varsity back view">
+                    </div>
+                    <div class="product-body">
+                      <div class="product-meta"><span>Real wear</span><span>Back print</span></div>
+                      <h3>Boondocks Jacket Set</h3>
+                      <p>Back-view print application across a full class run.</p>
                     </div>
                   </article>
                 </div>
@@ -470,7 +490,7 @@
                 <path d="M17.5 6.5h.01"></path>
               </svg>
             </a>
-            <a class="social-link" href="#" aria-label="WhatsApp">
+            <a class="social-link" href="https://wa.me/27607711685?text=Hello%20B%26T%20Apparel%2C%20I%20would%20like%20a%20quotation." target="_blank" rel="noopener" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                 <path d="M20 12a8 8 0 0 1-11.7 7L4 20l1.2-4.1A8 8 0 1 1 20 12Z"></path>
                 <path d="M9.5 9.5c1 3 2.5 4.5 5.5 5.5"></path>
@@ -482,10 +502,18 @@
     </div>
 
     <div class="copyright-strip">
-      <div class="container">© 2026 Innovation B&amp;T Apparel. Serving schools across South Africa.</div>
+      <div class="container">Â© 2026 Innovation B&amp;T Apparel. Serving schools across South Africa.</div>
     </div>
   </footer>
 
   <script src="main.js"></script>
+  <script src="assets/js/scroll-anim.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
