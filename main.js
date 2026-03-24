@@ -1,4 +1,25 @@
 (() => {
+  const qs = (selector, root = document) => root.querySelector(selector);
+  const qsa = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+  const SHOP = {
+    catalogRoot: ".catalog-stack",
+    pillsWrap: ".pills",
+    sections: ":scope > section",
+    sortSelect: ".catalog-toolbar select",
+    searchInputs: ".search-shell input[type='search'], .drawer-search input[type='search']",
+    countLabel: ".catalog-toolbar .toolbar-left .muted",
+    showingLabel: ".catalog-toolbar .toolbar-left span",
+    pillButtons: ".pill",
+    productGrids: ".product-grid",
+    productCards: ".product-card",
+    cardsInSection: ".product-card, .feature-card"
+  };
+  const SORT_MODE = {
+    featured: "featured",
+    alphabetical: "alphabetical",
+    newest: "newest"
+  };
+
   const onReady = (fn) => {
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", fn, { once: true });
@@ -7,7 +28,7 @@
     fn();
   };
 
-  const normalize = (value) =>
+  const normalizeText = (value) =>
     String(value || "")
       .toLowerCase()
       .replace(/&/g, " and ")
@@ -15,32 +36,29 @@
       .replace(/\s+/g, " ")
       .trim();
 
-  const includesAllTokens = (source, tokenString) => {
-    const tokens = normalize(tokenString).split(" ").filter(Boolean);
+  const includesAllTokens = (source, query) => {
+    const tokens = normalizeText(query).split(" ").filter(Boolean);
     if (!tokens.length) return true;
-    const normalizedSource = normalize(source);
-    return tokens.every((token) => normalizedSource.includes(token));
+    const sourceText = normalizeText(source);
+    return tokens.every((token) => sourceText.includes(token));
   };
 
   const initDrawer = () => {
-    const menuToggle = document.querySelector("[data-menu-toggle]");
-    const mobileDrawer = document.querySelector("[data-mobile-drawer]");
-    const drawerClose = document.querySelector("[data-drawer-close]");
-    const drawerBackdrop = document.querySelector("[data-drawer-backdrop]");
+    const menuToggle = qs("[data-menu-toggle]");
+    const mobileDrawer = qs("[data-mobile-drawer]");
+    const drawerClose = qs("[data-drawer-close]");
+    const drawerBackdrop = qs("[data-drawer-backdrop]");
+    if (!menuToggle || !mobileDrawer) return;
 
     const setDrawerState = (isOpen) => {
-      if (!mobileDrawer || !menuToggle) return;
       mobileDrawer.classList.toggle("is-open", isOpen);
       menuToggle.setAttribute("aria-expanded", String(isOpen));
       document.body.style.overflow = isOpen ? "hidden" : "";
     };
 
-    if (menuToggle && mobileDrawer) {
-      menuToggle.addEventListener("click", () => {
-        const isOpen = !mobileDrawer.classList.contains("is-open");
-        setDrawerState(isOpen);
-      });
-    }
+    menuToggle.addEventListener("click", () => {
+      setDrawerState(!mobileDrawer.classList.contains("is-open"));
+    });
 
     if (drawerClose) {
       drawerClose.addEventListener("click", () => setDrawerState(false));
@@ -50,13 +68,13 @@
       drawerBackdrop.addEventListener("click", () => setDrawerState(false));
     }
 
-    document.querySelectorAll("[data-drawer-link]").forEach((link) => {
+    qsa("[data-drawer-link]").forEach((link) => {
       link.addEventListener("click", () => setDrawerState(false));
     });
   };
 
   const initAccordions = () => {
-    document.querySelectorAll(".accordion-trigger").forEach((trigger) => {
+    qsa(".accordion-trigger").forEach((trigger) => {
       trigger.addEventListener("click", () => {
         const item = trigger.closest(".accordion-item");
         if (!item) return;
@@ -67,11 +85,11 @@
   };
 
   const initHeroSlideshow = () => {
-    const slideshow = document.querySelector("[data-slideshow]");
+    const slideshow = qs("[data-slideshow]");
     if (!slideshow) return;
 
-    const slides = Array.from(slideshow.querySelectorAll("[data-slide]"));
-    const dots = Array.from(slideshow.querySelectorAll("[data-slide-dot]"));
+    const slides = qsa("[data-slide]", slideshow);
+    const dots = qsa("[data-slide-dot]", slideshow);
     if (!slides.length || !dots.length) return;
 
     let activeIndex = 0;
@@ -92,8 +110,7 @@
     const startSlideshow = () => {
       clearInterval(timerId);
       timerId = setInterval(() => {
-        const nextIndex = (activeIndex + 1) % slides.length;
-        showSlide(nextIndex);
+        showSlide((activeIndex + 1) % slides.length);
       }, 2500);
     };
 
@@ -109,92 +126,53 @@
   };
 
   const initShopCatalog = () => {
-    const catalogStack = document.querySelector(".catalog-stack");
-    const pillsWrap = document.querySelector(".pills");
+    const catalogStack = qs(SHOP.catalogRoot);
+    const pillsWrap = qs(SHOP.pillsWrap);
     if (!catalogStack || !pillsWrap) return;
 
-    const sections = Array.from(catalogStack.querySelectorAll(":scope > section"));
+    const sections = qsa(SHOP.sections, catalogStack);
     if (!sections.length) return;
 
-    const toolbarLeftSpans = Array.from(
-      document.querySelectorAll(".catalog-toolbar .toolbar-left span")
-    );
-    const showingLabel = toolbarLeftSpans[0] || null;
-    const countLabel = document.querySelector(".catalog-toolbar .toolbar-left .muted");
-    const sortSelect = document.querySelector(".catalog-toolbar select");
-    const searchInputs = Array.from(
-      document.querySelectorAll(".search-shell input[type='search'], .drawer-search input[type='search']")
-    );
+    const sortSelect = qs(SHOP.sortSelect);
+    const searchInputs = qsa(SHOP.searchInputs);
+    const countLabel = qs(SHOP.countLabel);
+    const showingLabel = qsa(SHOP.showingLabel)[0] || null;
+    const pillButtons = qsa(SHOP.pillButtons, pillsWrap);
 
-    const sectionMeta = sections.map((section) => {
-      const label = section.querySelector(".section-label")?.textContent?.trim() || "";
-      const title = section.querySelector("h2")?.textContent?.trim() || "";
-      const cards = Array.from(section.querySelectorAll(".product-card, .feature-card"));
-      cards.forEach((card, index) => {
+    qsa(SHOP.productGrids, catalogStack).forEach((grid) => {
+      qsa(SHOP.productCards, grid).forEach((card, index) => {
         card.dataset.originalIndex = String(index);
       });
-
-      return {
-        element: section,
-        label,
-        title,
-        key: normalize(label),
-        cards
-      };
     });
 
-    const pillButtons = Array.from(pillsWrap.querySelectorAll(".pill"));
-    const keyAliases = new Map([
-      ["all", "all"],
-      ["jackets blazers", "jackets blazers"],
-      ["pants skirts", "pants skirts"],
-      ["jerseys tracksuits", "jerseys tracksuits"],
-      ["shirts t shirts", "shirts t shirts"],
-      ["customisation branding", "customisation branding"],
-      ["printing embroidery", "customisation branding"]
-    ]);
+    const sectionModels = sections.map((section) => {
+      const label = (qs(".section-label", section)?.textContent || "").trim();
+      const title = (qs("h2", section)?.textContent || "").trim();
+      const cards = qsa(SHOP.cardsInSection, section);
+      const key = section.dataset.sectionKey || normalizeText(label).replace(/\s+/g, "-");
 
-    const mapPillToKey = (pillText) =>
-      keyAliases.get(normalize(pillText)) || normalize(pillText);
+      return { element: section, key, label, title, cards };
+    });
 
-    let activeKey = mapPillToKey(
-      pillButtons.find((pill) => pill.classList.contains("active"))?.textContent || "All"
-    );
-    let searchTerm = "";
-    let sortMode = normalize(sortSelect?.value || "featured");
-
-    const getVisibleCards = () =>
-      sectionMeta.flatMap((meta) =>
-        meta.cards.filter((card) => !card.hidden && !meta.element.hidden)
-      );
-
-    const updateToolbar = () => {
-      const activePill = pillButtons.find((pill) => pill.classList.contains("active"));
-      const label = activePill ? activePill.textContent.trim() : "All categories";
-      const totalVisible = getVisibleCards().length;
-
-      if (showingLabel) {
-        showingLabel.textContent = label === "All" ? "All categories" : label;
-      }
-      if (countLabel) {
-        countLabel.textContent = `${totalVisible} item${totalVisible === 1 ? "" : "s"}`;
-      }
+    const state = {
+      filterKey:
+        pillButtons.find((pill) => pill.classList.contains("active"))?.dataset.filter || "all",
+      search: "",
+      sort: normalizeText(sortSelect?.value || SORT_MODE.featured)
     };
 
     const sortGrid = (grid) => {
-      const cards = Array.from(grid.children).filter((el) =>
-        el.classList.contains("product-card")
-      );
+      const cards = qsa(`:scope > ${SHOP.productCards}`, grid);
       if (!cards.length) return;
 
       const sorted = [...cards];
-      if (sortMode.includes("alphabetical")) {
+      if (state.sort.includes(SORT_MODE.alphabetical)) {
         sorted.sort((a, b) => {
-          const aTitle = a.querySelector("h3")?.textContent || "";
-          const bTitle = b.querySelector("h3")?.textContent || "";
+          const aTitle = qs("h3", a)?.textContent || "";
+          const bTitle = qs("h3", b)?.textContent || "";
           return aTitle.localeCompare(bTitle, undefined, { sensitivity: "base" });
         });
-      } else if (sortMode.includes("newest")) {
+      } else if (state.sort.includes(SORT_MODE.newest)) {
         sorted.sort(
           (a, b) =>
             Number(b.dataset.originalIndex || "0") - Number(a.dataset.originalIndex || "0")
@@ -209,23 +187,43 @@
       sorted.forEach((card) => grid.appendChild(card));
     };
 
-    const applyCatalogState = () => {
-      sectionMeta.forEach((meta) => {
-        const isCategoryMatch =
-          activeKey === "all" || includesAllTokens(meta.key, activeKey);
+    const syncSearchInputs = (value, sourceInput) => {
+      searchInputs.forEach((input) => {
+        if (input !== sourceInput) {
+          input.value = value;
+        }
+      });
+    };
 
-        meta.cards.forEach((card) => {
-          const searchableText = `${meta.label} ${meta.title} ${card.textContent || ""}`;
-          const isSearchMatch = includesAllTokens(searchableText, searchTerm);
-          card.hidden = !isCategoryMatch || !isSearchMatch;
+    const updateToolbar = () => {
+      const activePill = pillButtons.find((pill) => pill.classList.contains("active"));
+      const filterLabel = activePill ? activePill.textContent.trim() : "All categories";
+      const visibleCards = sectionModels.flatMap((model) =>
+        model.cards.filter((card) => !card.hidden && !model.element.hidden)
+      );
+
+      if (showingLabel) {
+        showingLabel.textContent = filterLabel === "All" ? "All categories" : filterLabel;
+      }
+
+      if (countLabel) {
+        const count = visibleCards.length;
+        countLabel.textContent = `${count} item${count === 1 ? "" : "s"}`;
+      }
+    };
+
+    const applyCatalogState = () => {
+      sectionModels.forEach((model) => {
+        const categoryMatch = state.filterKey === "all" || model.key === state.filterKey;
+
+        model.cards.forEach((card) => {
+          const searchableText = `${model.label} ${model.title} ${card.textContent || ""}`;
+          const searchMatch = includesAllTokens(searchableText, state.search);
+          card.hidden = !categoryMatch || !searchMatch;
         });
 
-        const hasVisibleCards = meta.cards.some((card) => !card.hidden);
-        meta.element.hidden = !hasVisibleCards;
-
-        meta.element
-          .querySelectorAll(".product-grid")
-          .forEach((grid) => sortGrid(grid));
+        model.element.hidden = !model.cards.some((card) => !card.hidden);
+        qsa(SHOP.productGrids, model.element).forEach((grid) => sortGrid(grid));
       });
 
       updateToolbar();
@@ -235,30 +233,22 @@
       pill.addEventListener("click", () => {
         pillButtons.forEach((btn) => btn.classList.remove("active"));
         pill.classList.add("active");
-        activeKey = mapPillToKey(pill.textContent || "");
+        state.filterKey = pill.dataset.filter || "all";
         applyCatalogState();
       });
     });
 
     if (sortSelect) {
       sortSelect.addEventListener("change", () => {
-        sortMode = normalize(sortSelect.value);
+        state.sort = normalizeText(sortSelect.value);
         applyCatalogState();
       });
     }
 
-    const syncSearchInputs = (value, source) => {
-      searchInputs.forEach((input) => {
-        if (input !== source) {
-          input.value = value;
-        }
-      });
-    };
-
     searchInputs.forEach((input) => {
       input.addEventListener("input", () => {
-        searchTerm = input.value.trim();
-        syncSearchInputs(searchTerm, input);
+        state.search = input.value.trim();
+        syncSearchInputs(state.search, input);
         applyCatalogState();
       });
     });
