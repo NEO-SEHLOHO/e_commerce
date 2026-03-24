@@ -1,13 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
   <title>Shop | B&amp;T Apparel</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/images/logo/logo-256.png">
+  <link rel="apple-touch-icon" href="assets/images/logo/logo-256.png">
 </head>
 <body>
   <div class="promo-bar">
@@ -20,12 +23,14 @@
 
   <header class="site-header">
     <div class="container header-shell">
-      <a class="brand" href="index.html">
-        <span class="brand-mark">B</span>
-        <span class="brand-copy">
-          <strong>Innovation B&amp;T Apparel</strong>
-          <small>Modern school uniform manufacturing and supply</small>
-        </span>
+      <a class="brand" href="index.html" aria-label="B and T Apparel home">
+        <img
+          class="brand-logo"
+          src="assets/images/logo/logo-256.png"
+          srcset="assets/images/logo/logo-256.png 256w, assets/images/logo/logo-512.png 512w, assets/images/logo/logo-1024.png 1024w"
+          sizes="(max-width: 767px) 44px, 52px"
+          alt="Innovation B and T Apparel logo"
+        >
       </a>
 
       <nav class="nav-links" aria-label="Primary">
@@ -169,7 +174,7 @@
 
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/showcase/jackets/black-navy-matric-2024-boondocks-varsity-jacket.png" alt="Matric 2024 varsity jacket design">
+                      <img src="assets/images/showcase/blazers/grey-school-uniform-blazer.png" alt="Grey school uniform blazer">
                     </div>
                     <div class="product-body">
                       <div class="product-meta"><span>Tailored</span><span>Lined finish</span></div>
@@ -181,12 +186,12 @@
 
                   <article class="card product-card">
                     <div class="product-media">
-                      <img src="assets/images/showcase/jackets/white-blue-senior-2025-varsity-jacket.png" alt="White and blue senior varsity jacket design">
+                      <img src="assets/images/showcase/blazers/School_blazers_with_embroidered_crests.png" alt="School blazers with embroidered crests">
                     </div>
                     <div class="product-body">
-                      <div class="product-meta"><span>Matric wear</span><span>Custom artwork</span></div>
-                      <h3>Senior Varsity Jackets</h3>
-                      <p>Custom varsity jackets with school identity, names, and class-year graphics.</p>
+                      <div class="product-meta"><span>Formal wear</span><span>Embroidered crests</span></div>
+                      <h3>Crested School Blazers</h3>
+                      <p>Smart blazers finished with school crest embroidery for a polished formal look.</p>
                       <a class="btn btn-secondary" href="quote.html">Request quotation</a>
                     </div>
                   </article>
@@ -304,36 +309,43 @@
               <section>
                 <div class="section-head">
                   <div class="title-stack">
-                    <p class="section-label">Printing / Embroidery</p>
-                    <h2>Custom finishing options across the full range</h2>
+                    <p class="section-label">Customisation &amp; Branding</p>
+                    <h2>Uniform customisation services for school identity and consistency</h2>
                     <div class="title-rule"></div>
                   </div>
                 </div>
 
-                <div class="product-grid">
-                  <article class="card product-card">
-                    <div class="product-media">
-                      <img src="assets/images/showcase/polos/sky-blue-senior-2024-spongebob-polo.png" alt="Sky blue senior 2024 custom polo design">
-                    </div>
-                    <div class="product-body">
-                      <div class="product-meta"><span>Custom colours</span><span>School branding</span></div>
-                      <h3>Colours &amp; Logos</h3>
-                      <p>School colours, logos, and embroidery options applied to uniform ranges.</p>
-                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
-                    </div>
+                <!-- Changed: Converted product category into service section -->
+                <!-- Removed: product card layout -->
+                <div class="feature-grid">
+                  <article class="feature-card">
+                    <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16"></path><path d="M4 7h16"></path><path d="M4 17h16"></path></svg></span>
+                    <h3>Colours &amp; Logos</h3>
+                    <p>Match school colours and crest standards across polos, blazers, sweaters, and tracksuits.</p>
                   </article>
 
-                  <article class="card product-card">
-                    <div class="product-media">
-                      <img src="assets/images/showcase/jerseys/blue-aurora-school-jersey-photo.png" alt="Blue aurora school jersey samples">
-                    </div>
-                    <div class="product-body">
-                      <div class="product-meta"><span>Fabric options</span><span>Size planning</span></div>
-                      <h3>Fabric &amp; Sizing Specs</h3>
-                      <p>Production aligned to fabric specifications and full sizing requirements.</p>
-                      <a class="btn btn-secondary" href="quote.html">Request quotation</a>
-                    </div>
+                  <article class="feature-card">
+                    <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 7h10v10H7z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+                    <h3>Embroidery &amp; Printing</h3>
+                    <p>Apply crest embroidery, learner details, and print treatments with consistent placement and finish.</p>
                   </article>
+
+                  <article class="feature-card">
+                    <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 14c4-8 12-8 16 0"></path><path d="M4 18h16"></path></svg></span>
+                    <h3>Fabric Options</h3>
+                    <p>Choose fabric weights and composition suited to school wear, seasonality, and durability requirements.</p>
+                  </article>
+
+                  <article class="feature-card">
+                    <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 4v16"></path><path d="M16 4v16"></path><path d="M8 8h8"></path><path d="M8 16h8"></path></svg></span>
+                    <h3>Size Planning</h3>
+                    <p>Plan complete size runs for learners and staff to keep fittings accurate across bulk orders.</p>
+                  </article>
+                </div>
+
+                <div class="btn-row top-gap">
+                  <!-- Added: Customisation CTA -->
+                  <a class="btn btn-primary" href="quote.html">Customize Your Uniform</a>
                 </div>
               </section>
 
@@ -502,7 +514,7 @@
     </div>
 
     <div class="copyright-strip">
-      <div class="container">Â© 2026 Innovation B&amp;T Apparel. Serving schools across South Africa.</div>
+      <div class="container">© 2026 Innovation B&amp;T Apparel. Serving schools across South Africa.</div>
     </div>
   </footer>
 
@@ -510,6 +522,7 @@
   <script src="assets/js/scroll-anim.js"></script>
 </body>
 </html>
+
 
 
 

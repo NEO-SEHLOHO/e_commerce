@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/images/logo/logo-256.png">
+  <link rel="apple-touch-icon" href="assets/images/logo/logo-256.png">
 </head>
 <body>
   <div class="promo-bar">
@@ -92,8 +94,11 @@
             <div class="hero-layout">
               <div class="hero-copy">
                 <p class="section-label">South African School Uniform Specialists</p>
-                <h1>Quality school uniforms built for every school day</h1>
-                <p>B&amp;T Apparel delivers durable, affordable school uniforms with reliable turnaround times, supporting made-to-order production and bulk supply for parents, schools, and large orders.</p>
+                <!-- Improved: Custom manufacturing headline and positioning -->
+                <h1>Custom uniforms designed for your school</h1>
+                <p>B&amp;T Apparel manufactures made-to-order school uniforms based on your school identity, colours, crest placement, and branding standards, with dependable bulk production and delivery across South Africa.</p>
+                <!-- Added: Custom manufacturing message -->
+                <p class="hero-manufacturing-note">Bulk manufacturing tailored to your requirements, from design approval to final delivery.</p>
                 <div class="hero-trust-strip" aria-label="Key service strengths">
                   <span>Durable &amp; affordable</span>
                   <span>Made-to-order &amp; bulk supply</span>
@@ -127,7 +132,8 @@
                     <button class="hero-dot" type="button" aria-label="Show slide 3" data-slide-dot></button>
                   </div>
                 </div>
-                <a class="btn hero-quote-btn" href="quote.html">Get a Quote</a>
+                <!-- Improved: Above-the-fold primary CTA -->
+                <a class="btn hero-quote-btn" href="quote.html">Request a Quote</a>
               </div>
             </div>
           </div>
@@ -140,46 +146,56 @@
         <div class="section-head">
           <div class="title-stack">
             <p class="section-label">Shop by Category</p>
-            <h2>Uniform essentials built for every school day</h2>
+            <!-- Improved: Custom manufacturing emphasis near top -->
+            <h2>Made-to-order uniforms that match your school identity</h2>
+            <p>Custom school uniforms produced to your exact colours, branding, and garment requirements.</p>
             <div class="title-rule"></div>
           </div>
         </div>
         <div class="chip-row" aria-label="Category strip">
           <article class="category-tile">
-            <span class="icon-wrap"><img src="assets/images/icons/uniform-blazer.svg" alt="" aria-hidden="true"></span>
+            <span class="category-media">
+              <!-- Updated: Blazers image -->
+              <img src="assets/images/showcase/blazers/grey-school-uniform-blazer.png" alt="School blazer front view">
+            </span>
             <strong>Blazers</strong>
             <span>Formal layers</span>
           </article>
           <article class="category-tile">
-            <span class="icon-wrap"><img src="assets/images/icons/uniform-skirt.svg" alt="" aria-hidden="true"></span>
+            <span class="category-media">
+              <img src="assets/images/showcase/skirts/yellow-plaid-school-skirt.png" alt="School skirt">
+            </span>
             <strong>Skirts</strong>
             <span>Daily school wear</span>
           </article>
           <article class="category-tile">
-            <span class="icon-wrap"><img src="assets/images/icons/uniform-pants.svg" alt="" aria-hidden="true"></span>
+            <span class="category-media">
+              <img src="assets/images/products/grey-school-pants.png" alt="School trousers">
+            </span>
             <strong>Trousers</strong>
             <span>Comfort fit</span>
           </article>
           <article class="category-tile">
-            <span class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m7 18 2-10h6l2 10"></path><path d="M8 8c0-2.2 1.8-4 4-4s4 1.8 4 4"></path></svg></span>
+            <span class="category-media">
+              <img src="assets/images/showcase/jerseys/blue-aurora-school-jersey-photo.png" alt="School jersey">
+            </span>
             <strong>Jerseys</strong>
             <span>Winter-ready warmth</span>
           </article>
           <article class="category-tile">
+            <!-- Reverted: Tracksuits back to icon -->
             <span class="icon-wrap"><img src="assets/images/icons/uniform-tracksuit.svg" alt="" aria-hidden="true"></span>
             <strong>Tracksuits</strong>
             <span>Sports and activewear</span>
           </article>
           <article class="category-tile">
-            <span class="icon-wrap"><img src="assets/images/icons/uniform-shirt.svg" alt="" aria-hidden="true"></span>
+            <span class="category-media">
+              <img src="assets/images/showcase/polos/white-gold-trim-school-polo.png" alt="School shirt">
+            </span>
             <strong>Shirts</strong>
             <span>Clean formal basics</span>
           </article>
-          <article class="category-tile">
-            <span class="icon-wrap"><img src="assets/images/icons/uniform-embroidery.svg" alt="" aria-hidden="true"></span>
-            <strong>Embroidery</strong>
-            <span>School branding</span>
-          </article>
+          <!-- Removed: Embroidery category -->
         </div>
       </div>
     </section>
@@ -194,8 +210,10 @@
             <p>Find everyday essentials with consistent sizing, durable finishes, and school-ready presentation for learners who need comfort from assembly to final bell.</p>
           </div>
           <div class="btn-row">
-            <a class="btn btn-primary" href="shop.html">Browse stock</a>
-            <a class="btn btn-secondary" href="contact.html">Ask a question</a>
+            <!-- Improved: CTA button -->
+            <a class="btn btn-primary" href="quote.html">Request a Quote</a>
+            <!-- Added: CTA button -->
+            <a class="btn btn-secondary" href="quote.html">Customize Your Uniform</a>
           </div>
         </article>
 
@@ -203,14 +221,65 @@
           <span class="audience-hero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V8l8-4 8 4v12"></path><path d="M9 20v-6h6v6"></path></svg></span>
           <div>
             <p class="section-label">Businesses &amp; Schools</p>
-            <h3>Bulk ordering built for term launches and branded supply programmes.</h3>
-            <p>Manage custom colours, embroidery, design approvals, and production timelines through a streamlined made-to-order and bulk manufacturing process.</p>
+            <!-- Improved: Custom manufacturing message -->
+            <h3>Bulk manufacturing designed for school launches and branded uniform programmes.</h3>
+            <p>Manage custom colours, logo embroidery, design approvals, and production timelines through a made-to-order process tailored to your school requirements.</p>
           </div>
           <div class="btn-row">
-            <a class="btn btn-primary" href="quote.html">Request quotation</a>
-            <a class="btn btn-secondary" href="about.html">View capabilities</a>
+            <!-- Improved: CTA button -->
+            <a class="btn btn-primary" href="quote.html">Bulk Order for Schools</a>
+            <!-- Added: CTA button -->
+            <a class="btn btn-secondary" href="quote.html">Request a Quote</a>
           </div>
         </article>
+      </div>
+    </section>
+
+    <!-- Added: Trust & credibility section -->
+    <section class="section-tight trust-section">
+      <div class="container">
+        <div class="section-head">
+          <div class="title-stack">
+            <p class="section-label">Trust &amp; Credibility</p>
+            <h2>Trusted by schools since 2021</h2>
+            <p>Local manufacturing, reliable lead times, and consistent quality schools can depend on.</p>
+            <div class="title-rule"></div>
+          </div>
+        </div>
+        <div class="feature-grid trust-grid">
+          <article class="feature-card trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v6c0 5-3.5 8.5-7 9-3.5-.5-7-4-7-9V6l7-3z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </span>
+            <h3>Trusted Since 2021</h3>
+            <p>Supporting South African schools with dependable uniform manufacturing from planning to delivery.</p>
+          </article>
+          <article class="feature-card trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18"></path><path d="M3 7h18"></path><path d="M3 17h18"></path></svg>
+            </span>
+            <h3>50+ Schools Served</h3>
+            <p>Large and small school orders fulfilled with consistent sizing, trims, and branding execution.</p>
+          </article>
+          <article class="feature-card trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            </span>
+            <h3>Reliable Turnaround</h3>
+            <p>Production schedules and communication structured to support term deadlines and launch dates.</p>
+          </article>
+          <article class="feature-card trust-card">
+            <span class="trust-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V8l8-4 8 4v12"></path><path d="M9 20v-6h6v6"></path></svg>
+            </span>
+            <h3>Local Manufacturing</h3>
+            <p>Durable materials, quality checks, and finishing standards built for daily school use.</p>
+          </article>
+        </div>
+        <div class="trust-testimonial">
+          <p>"Very satisfied with quality and delivery. The uniforms arrived on time and matched our school colours perfectly."</p>
+          <strong>School Admin Team, Free State</strong>
+        </div>
       </div>
     </section>
 
@@ -438,7 +507,7 @@
       </div>
     </div>
     <div class="copyright-strip">
-      <div class="container">Â© 2026 Innovation B&amp;T Apparel. Serving schools across South Africa.</div>
+      <div class="container">© 2026 Innovation B&amp;T Apparel. Serving schools across South Africa.</div>
     </div>
   </footer>
 
@@ -446,6 +515,7 @@
   <script src="assets/js/scroll-anim.js"></script>
 </body>
 </html>
+
 
 
 

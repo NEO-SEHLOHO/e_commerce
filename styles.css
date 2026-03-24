@@ -666,6 +666,17 @@ summary:focus-visible {
   font-size: clamp(1rem, 1.4vw, 1.14rem);
 }
 
+.hero-manufacturing-note {
+  margin-top: 14px !important;
+  padding: 12px 14px;
+  border-left: 3px solid rgba(var(--gold-soft-rgb), 0.8);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #f9f5ea !important;
+  font-size: 0.98rem !important;
+  font-weight: 700;
+}
+
 .hero-trust-strip {
   display: flex;
   flex-wrap: wrap;
@@ -839,6 +850,7 @@ summary:focus-visible {
   overflow-x: auto;
   padding-bottom: 6px;
   scrollbar-width: thin;
+  align-items: stretch;
 }
 
 .chip-row::-webkit-scrollbar {
@@ -852,9 +864,27 @@ summary:focus-visible {
 
 .category-tile {
   min-width: 150px;
+  min-height: 220px;
   display: grid;
+  grid-template-rows: auto auto 1fr;
   gap: 12px;
   align-content: start;
+}
+
+.category-media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(230, 223, 210, 0.9);
+  background: linear-gradient(180deg, #fffdf8, #f2ede4);
+}
+
+.category-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .icon-wrap {
@@ -929,6 +959,56 @@ summary:focus-visible {
 .step-card p,
 .muted {
   color: var(--muted);
+}
+
+.trust-section {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(242, 237, 228, 0.48));
+}
+
+.trust-grid {
+  align-items: stretch;
+}
+
+.trust-card {
+  display: grid;
+  gap: 12px;
+}
+
+.trust-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(var(--brand-blue-rgb), 0.12);
+  color: var(--brand-blue);
+}
+
+.trust-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.trust-testimonial {
+  margin-top: var(--space-4);
+  padding: 18px 20px;
+  border: 1px solid rgba(var(--gold-rgb), 0.3);
+  border-radius: var(--radius-sm);
+  background: #fffdf8;
+  box-shadow: var(--shadow-sm);
+}
+
+.trust-testimonial p {
+  margin: 0;
+  color: #3b3327;
+  font-weight: 600;
+}
+
+.trust-testimonial strong {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--brand-blue-ink);
+  font-size: 0.92rem;
 }
 
 .product-grid {
