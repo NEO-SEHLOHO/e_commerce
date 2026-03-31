@@ -1,4 +1,4 @@
-﻿# Deployment Guide
+# Deployment Guide
 
 This website is a static site (HTML/CSS/JS), so no server runtime is required.
 
@@ -7,8 +7,8 @@ This website is a static site (HTML/CSS/JS), so no server runtime is required.
 1. Open `index.html`, `shop.html`, `about.html`, `contact.html`, `quote.html`, `legal.html` locally.
 2. Confirm image paths load from `assets/images/...`.
 3. Confirm quotation links work:
-   - WhatsApp: `https://wa.me/27607711685`
-   - Phone: `060 771 1685`, `084 246 4470`
+   - WhatsApp: `https://wa.me/27603350437`
+   - Phone: `060 335 0437`, `084 246 4470`
    - Email: `bntinnocons@gmail.com`
 
 ## Option 1: Netlify (recommended)

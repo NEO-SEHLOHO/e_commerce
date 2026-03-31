@@ -1,4 +1,4 @@
-﻿(() => {
+(() => {
   const itemsRoot = document.getElementById("qb-items");
   const addBtn = document.getElementById("qb-add-item");
   const waBtn = document.getElementById("qb-send-whatsapp");
@@ -109,7 +109,7 @@
   function updateLinks() {
     const message = buildMessage();
     const encoded = encodeURIComponent(message);
-    waBtn.href = `https://wa.me/27607711685?text=${encoded}`;
+    waBtn.href = `https://wa.me/27603350437?text=${encoded}`;
     mailBtn.href = `mailto:bntinnocons@gmail.com?subject=Quotation%20Request&body=${encoded}`;
   }
 
